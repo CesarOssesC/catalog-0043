@@ -37,6 +37,13 @@
     </div>
   </div>
 
+  <%= form.fields_for :categories do |ff| %>
+    <div class="form-group col-5 mb-5">
+      <%= ff.label :name, "Nombre Categoría", class:"form-label" %>
+      <%= ff.text_field :name, class:"form-control" %>
+    </div>
+  <% end %>
+
   <div>
     <%= form.submit "Crear Producto", class:"btn btn-success" %>
   </div>
