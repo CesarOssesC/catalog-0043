@@ -14,11 +14,18 @@
     <%= product.size %>
   </p>
 
-  <div>
-    <h5>Categorias</h5>
-    <% product.categories.each do |category| %>
-      <span>| <%= category.name %> |</span>
-    <% end %>
+  <div class="col-md-6">
+    <ol class="list-group list-group-numbered list-group-horizontal">
+      <% product.categories.each do |pc| %>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+          <div class="ms-2 me-auto">
+            <div class="fw-bold"><%= pc.name %></div>
+            <span class="badge bg-primary rounded-pill"><%= pc.products.count %></span>
+          </div>
+        </li>
+      <% end %>
+    </ol>
   </div>
+
 
 </div>
