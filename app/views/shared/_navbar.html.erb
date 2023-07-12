@@ -12,6 +12,11 @@
             <li class="nav-item">
                 <%= link_to "Categorias", categories_path, class:"nav-link" %>
             </li>
+            <% if user_signed_in? %>
+                <li class="nav-item">
+                    <%= link_to "Tus reacciones", my_reactions_path, class:"nav-link" %>
+                </li>
+            <% end %>
         </ul>
         <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown">
