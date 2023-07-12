@@ -1,0 +1,24 @@
+<div id="<%= dom_id product %>">
+  <p>
+    <strong>Name:</strong>
+    <%= product.name %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= product.price %>
+  </p>
+
+  <p>
+    <strong>Size:</strong>
+    <%= product.size %>
+  </p>
+
+  <div>
+    <h5>Categorias</h5>
+    <% product.categories.each do |category| %>
+      <span>| <%= category.name %> |</span>
+    <% end %>
+  </div>
+
+</div>
